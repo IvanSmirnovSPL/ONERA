@@ -1,0 +1,120 @@
+ 
+    Flow modellium lab solver
+    Web page: www.flowmodellium.ru
+ 
+ driver,             release date 19.03.2018       
+ bc_common,          release date 05.03.2018       
+ cell_grads,         release date 16.03.2018       
+ flow_class,         release date 14.03.2018       
+ flow_common,        release date 19.03.2018       
+ flow_io,            release date 03.04.2018       
+ initialize,         release date 19.03.2018       
+ lu_sgs_solver,      release date 10.04.2016       
+ numerics_common,    release date 26.07.2017       
+ prim_reconst,       release date 25.01.2018       
+ partition module,   release date 27.10.2016       
+ rs_common,          release date 28.02.2018       
+ restart,            release date 05.09.2017       
+ revolve_io,         release date 05.02.2017       
+ scheme_rhs,         release date 05.08.2017       
+ steady_solver,      release date 20.04.2018       
+ 
+  ###### Solver input data after initialization:
+  
+  ## Geometrical parameters ##
+  CharLength=    1.00000    
+  Geometryscale=    1000.00    
+   ------------------------
+  
+  ## Flow model data ##
+  FlowModel= sa        
+  Viscous equations are solved
+  Number of species=1
+  Spalart-Allmaras RANS model
+  Viscosity type=  powerlaw
+  Single-component gas
+  Gas molar mass =    28.84    
+  
+  Run is restarted from sa
+  
+  Use power-law viscosity in case of single-component flow:    0.18E-04  0.29E+03  0.75    
+  
+  StefanBoltzmann  =     0.5670320E-07
+  Emissivity constant   =     0.7000000    
+  
+  Scales for physical variables:
+   CharLength   =      1.000000    
+   CharRho      =      1.131458    
+   CharTemp     =      299.9443    
+   CharVel      =      294.0817    
+   GasConst     =      288.3337    
+   CharPressure =      97853.10    
+   CharVisc     =     0.1821725E-04
+   CharCond     =     0.5252646E-02
+   CharHeatFlux =      1.575502    
+   Force*       =      97853.    
+   Molar mass of air=     28.836    
+   CharRe       =     0.1826517E+08
+   EosScale     =      1.000000    
+    Old check: px/(rhox*vx**2):   1.0000      px/(rhox*(Ru/Mu)*Temp):  0.34679E-01
+
+  
+   ------------------------
+  
+  ## Nesvetay core settings ##
+  Direction-wise TVD1D reconstruction
+  TVDLimiter=minmod
+  Number of MPI processes 12
+  Number of OpenMP threads 24
+  Total number of threads 288
+  Complete mesh counts:
+   Number of vertices:  15095421
+   Number of cells:  14932160
+   Number of faces:  44959312
+  Limiter length=  3
+ For OpenMP:
+  element chunk =  12961  out of  1284807
+  face chunk    =  39309  out of  3773744
+  vertex chunk  =  13390  out of  1285451
+   ------------------------
+  
+  ## Flowmodellium solver settings ##
+  Use kinetic/vt nondimen
+  Classical HLLC Riemann solver of Toro et. al. is used, with Toro wave speed estimates
+  distance_limit_in_meters =  0.1000E+16
+  list_wall_types= -8 -81 -83 -85 -9
+  Accurate RS faces in complete mesh=  45295056  out of  44959312   or in %:  100.7    
+   for boundary 1 in meters we have min_hn= 0.12E-05 max_hn= 0.48E-05 Re number based on smallest hn=  21.    
+  CFL= 0.1000E+07
+  Number of smaller CFL values=1000
+  Max num interation = 1000000000
+  L1ResidualTolerance= 0.1000E-10
+  L1ConveranceTolerance= 0.1000E-15
+  Conventional version of LU_SGS is used
+  Num_of_lusgs_cycles=1
+  Use jacobi correction..
+  Multiplyer for diagonal term in the LU-SGS =     1.1    
+  Positivity tolerances:
+       Density  tolerance in kg/m^3=    0.10000E-14
+  Density  tolerance for implicit sch   0.10000E-07
+    Temperature tolerance in Kelvin=     10.000    
+           Pressure tolerance in Pa=    0.10000E-04
+            Mass fraction tolerance=    0.10000E-24
+  
+  
+  ------------------------
+  ## Data writing settings ##
+  Use single-block restart without MPI write
+  Write_data_freq=    1
+  Write_restart_freq=500
+  1d data is written
+  surface data is written
+  volume data is written
+ 
+  ------------------------
+  ## Other settings ##
+  SRef=    7.85000    
+  L_capsule=    3.77700    
+  x_T=    1.32195    
+  y_T=  -0.151080    
+ -------------------------------
